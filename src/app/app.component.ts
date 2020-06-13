@@ -13,6 +13,10 @@ import { rxjsCreate } from './operators/create';
 import { rxjsEvery } from './operators/every';
 import { rxjsDistinctUntilChange } from './operators/distinctUntilChange';
 import { rxjsDefaultIfEmpty } from './operators/defaultIfEmpty';
+import {
+  rxjsDelay,
+  rxjsDelayWhen,
+} from './intermediate-operators/delay-delayWhen';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +39,10 @@ export class AppComponent implements OnInit {
     // rxjsCreate();
     // rxjsEvery();
     // rxjsDistinctUntilChange();
-    rxjsDefaultIfEmpty();
+    // rxjsDefaultIfEmpty();
+
+    /** -------------------Intermediate operators-------------- */
+    // rxjsDelay();
+    rxjsDelayWhen();
   }
 }
