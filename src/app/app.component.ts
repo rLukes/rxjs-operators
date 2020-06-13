@@ -6,6 +6,7 @@ import { rxjsInterval, rxjsTimer } from './operators/interval-timer';
 import { rxjsMap, rxjsMapTo } from './operators/map-mapTo';
 import { rxjsFilter } from './operators/filter';
 import { rxjsTap } from './operators/tap';
+import { rxjsPluck } from './operators/pluck';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit {
     // rxjsTimer();
     // rxjsMapTo();
     // rxjsFilter();
-    rxjsTap();
+    // rxjsTap();
+    rxjsPluck();
   }
 }
