@@ -8,6 +8,7 @@ import { rxjsFilter } from './operators/filter';
 import { rxjsTap } from './operators/tap';
 import { rxjsPluck } from './operators/pluck';
 import { rxjsFirst } from './operators/first';
+import { rxjsStartWith } from './operators/startWith';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,8 @@ export class AppComponent implements OnInit {
     // rxjsFilter();
     // rxjsTap();
     // rxjsPluck();
-    rxjsFirst();
+    // rxjsFirst();
+
+    rxjsStartWith();
   }
 }
