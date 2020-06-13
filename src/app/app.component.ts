@@ -36,6 +36,7 @@ import {
   debounceTime,
   distinctUntilChanged,
   skip,
+  skipWhile,
 } from 'rxjs/operators';
 
 @Component({
@@ -70,7 +71,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.rxjsSkip();
+    // this.rxjsSkip();
+    this.rxjsSkipWhile();
   }
 
   rxjsSkip() {
@@ -78,6 +80,15 @@ export class AppComponent implements OnInit, AfterViewInit {
       .pipe(
         map((event) => event.target.value),
         skip(10)
+      )
+      .subscribe((c) => console.log(c));
+  }
+
+  rxjsSkipWhile() {
+    const terms$ = fromEvent<any>(this.input.nativeElement, 'keyup')
+      .pipe(
+        map((event) => event.target.value),
+        skipWhile((v) => v !== 'g')
       )
       .subscribe((c) => console.log(c));
   }
