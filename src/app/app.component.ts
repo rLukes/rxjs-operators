@@ -11,6 +11,7 @@ import { rxjsFirst } from './operators/first';
 import { rxjsStartWith } from './operators/startWith';
 import { rxjsCreate } from './operators/create';
 import { rxjsEvery } from './operators/every';
+import { rxjsDistinctUntilChange } from './operators/distinctUntilChange';
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,7 @@ export class AppComponent implements OnInit {
     // rxjsFirst();
     // rxjsStartWith();
     // rxjsCreate();
-    rxjsEvery();
+    // rxjsEvery();
+    rxjsDistinctUntilChange();
   }
 }
