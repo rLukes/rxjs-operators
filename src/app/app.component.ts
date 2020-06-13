@@ -9,6 +9,7 @@ import { rxjsTap } from './operators/tap';
 import { rxjsPluck } from './operators/pluck';
 import { rxjsFirst } from './operators/first';
 import { rxjsStartWith } from './operators/startWith';
+import { rxjsCreate } from './operators/create';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
     // rxjsTap();
     // rxjsPluck();
     // rxjsFirst();
-
-    rxjsStartWith();
+    // rxjsStartWith();
+    rxjsCreate();
   }
 }
