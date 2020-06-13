@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+} from '@angular/core';
 import { rangeOperator } from './operators/range';
 import { rxjsOf } from './operators/of';
 import { rxjsFrom } from './operators/from';
@@ -22,14 +28,23 @@ import {
   rxjsTakeWhile,
   rxjsTakeUntil,
 } from './intermediate-operators/take';
-import { rxjsThorw, rxjsThrowError } from './intermediate-operators/thorwError';
+import { rxjsThrowError } from './intermediate-operators/thorwError';
+import { fromEvent } from 'rxjs';
+import {
+  map,
+  startWith,
+  debounceTime,
+  distinctUntilChanged,
+  skip,
+} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('searchInput', { static: true }) input: ElementRef;
   ngOnInit(): void {
     // rangeOperator();
     // rxjsOf();
@@ -51,7 +66,19 @@ export class AppComponent implements OnInit {
     // rxjsDelayWhen();
     // rxjsTakeWhile();
     // rxjsTakeUntil();
+    // rxjsThrowError();
+  }
 
-    rxjsThrowError();
+  ngAfterViewInit(): void {
+    this.rxjsSkip();
+  }
+
+  rxjsSkip() {
+    const terms$ = fromEvent<any>(this.input.nativeElement, 'keyup')
+      .pipe(
+        map((event) => event.target.value),
+        skip(10)
+      )
+      .subscribe((c) => console.log(c));
   }
 }
