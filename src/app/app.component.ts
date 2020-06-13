@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { rangeOperator } from './operators/range';
+import { rxjsOf } from './operators/of';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,6 @@ import { rangeOperator } from './operators/range';
 export class AppComponent implements OnInit {
   ngOnInit(): void {
     rangeOperator();
+    rxjsOf();
   }
 }
