@@ -38,6 +38,7 @@ import {
   skip,
   skipWhile,
 } from 'rxjs/operators';
+import { rxjsLast } from './intermediate-operators/last';
 
 @Component({
   selector: 'app-root',
@@ -68,11 +69,12 @@ export class AppComponent implements OnInit, AfterViewInit {
     // rxjsTakeWhile();
     // rxjsTakeUntil();
     // rxjsThrowError();
+    // rxjsLast();
   }
 
   ngAfterViewInit(): void {
     // this.rxjsSkip();
-    this.rxjsSkipWhile();
+    // this.rxjsSkipWhile();
   }
 
   rxjsSkip() {
