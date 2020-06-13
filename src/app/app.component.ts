@@ -17,6 +17,11 @@ import {
   rxjsDelay,
   rxjsDelayWhen,
 } from './intermediate-operators/delay-delayWhen';
+import {
+  rxjsTake,
+  rxjsTakeWhile,
+  rxjsTakeUntil,
+} from './intermediate-operators/take';
 
 @Component({
   selector: 'app-root',
@@ -40,9 +45,10 @@ export class AppComponent implements OnInit {
     // rxjsEvery();
     // rxjsDistinctUntilChange();
     // rxjsDefaultIfEmpty();
-
     /** -------------------Intermediate operators-------------- */
     // rxjsDelay();
-    rxjsDelayWhen();
+    // rxjsDelayWhen();
+    // rxjsTakeWhile();
+    // rxjsTakeUntil();
   }
 }
