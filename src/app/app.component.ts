@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { rangeOperator } from './operators/range';
 import { rxjsOf } from './operators/of';
 import { rxjsFrom } from './operators/from';
-import { rxjsInterval } from './operators/interval-timer';
+import { rxjsInterval, rxjsTimer } from './operators/interval-timer';
+import { rxjsMap, rxjsMapTo } from './operators/map-mapTo';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,8 @@ export class AppComponent implements OnInit {
     // rangeOperator();
     // rxjsOf();
     // rxjsFrom();
-    rxjsInterval();
+    // rxjsInterval();
+    // rxjsTimer();
+    rxjsMapTo();
   }
 }
