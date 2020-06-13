@@ -4,6 +4,7 @@ import { rxjsOf } from './operators/of';
 import { rxjsFrom } from './operators/from';
 import { rxjsInterval, rxjsTimer } from './operators/interval-timer';
 import { rxjsMap, rxjsMapTo } from './operators/map-mapTo';
+import { rxjsFilter } from './operators/filter';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
     // rxjsFrom();
     // rxjsInterval();
     // rxjsTimer();
-    rxjsMapTo();
+    // rxjsMapTo();
+    rxjsFilter();
   }
 }
