@@ -39,6 +39,7 @@ import {
   skipWhile,
 } from 'rxjs/operators';
 import { rxjsLast } from './intermediate-operators/last';
+import { rxjsConcatAll } from './intermediate-operators/concatAll';
 
 @Component({
   selector: 'app-root',
@@ -70,6 +71,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     // rxjsTakeUntil();
     // rxjsThrowError();
     // rxjsLast();
+    rxjsConcatAll();
   }
 
   ngAfterViewInit(): void {
