@@ -22,6 +22,7 @@ import {
   rxjsTakeWhile,
   rxjsTakeUntil,
 } from './intermediate-operators/take';
+import { rxjsThorw, rxjsThrowError } from './intermediate-operators/thorwError';
 
 @Component({
   selector: 'app-root',
@@ -50,5 +51,7 @@ export class AppComponent implements OnInit {
     // rxjsDelayWhen();
     // rxjsTakeWhile();
     // rxjsTakeUntil();
+
+    rxjsThrowError();
   }
 }
