@@ -10,6 +10,7 @@ import { rxjsPluck } from './operators/pluck';
 import { rxjsFirst } from './operators/first';
 import { rxjsStartWith } from './operators/startWith';
 import { rxjsCreate } from './operators/create';
+import { rxjsEvery } from './operators/every';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit {
     // rxjsPluck();
     // rxjsFirst();
     // rxjsStartWith();
-    rxjsCreate();
+    // rxjsCreate();
+    rxjsEvery();
   }
 }
