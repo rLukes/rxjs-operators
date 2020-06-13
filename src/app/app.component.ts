@@ -7,6 +7,7 @@ import { rxjsMap, rxjsMapTo } from './operators/map-mapTo';
 import { rxjsFilter } from './operators/filter';
 import { rxjsTap } from './operators/tap';
 import { rxjsPluck } from './operators/pluck';
+import { rxjsFirst } from './operators/first';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ export class AppComponent implements OnInit {
     // rxjsMapTo();
     // rxjsFilter();
     // rxjsTap();
-    rxjsPluck();
+    // rxjsPluck();
+    rxjsFirst();
   }
 }
