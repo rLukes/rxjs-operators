@@ -40,6 +40,10 @@ import {
 } from 'rxjs/operators';
 import { rxjsLast } from './intermediate-operators/last';
 import { rxjsConcatAll } from './intermediate-operators/concatAll';
+import {
+  rxjsConcatMap,
+  rxjsConcatMapTo,
+} from './intermediate-operators/concatMap';
 
 @Component({
   selector: 'app-root',
@@ -71,7 +75,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     // rxjsTakeUntil();
     // rxjsThrowError();
     // rxjsLast();
-    rxjsConcatAll();
+    // rxjsConcatAll();
+    // rxjsConcatMap();
+    rxjsConcatMapTo();
   }
 
   ngAfterViewInit(): void {
