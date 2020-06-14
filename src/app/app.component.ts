@@ -47,7 +47,11 @@ import {
 import { rxjsSingle } from './intermediate-operators/single';
 import { rxjsReduce, rxjsScan } from './intermediate-operators/reduce-scan';
 import { rxjsGroupBy } from './intermediate-operators/groupBy';
-import { rxjsMerge } from './intermediate-operators/merge';
+import {
+  rxjsMerge,
+  rxjsMergeAll,
+  rxjsMergeMap,
+} from './intermediate-operators/merge';
 
 @Component({
   selector: 'app-root',
@@ -86,7 +90,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     //  rxjsScan();
     //rxjsGroupBy();
 
-    rxjsMerge();
+    //rxjsMerge();
+    //rxjsMergeAll();
+    rxjsMergeMap();
   }
 
   ngAfterViewInit(): void {
