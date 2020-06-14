@@ -46,6 +46,8 @@ import {
 } from './intermediate-operators/concatMap';
 import { rxjsSingle } from './intermediate-operators/single';
 import { rxjsReduce, rxjsScan } from './intermediate-operators/reduce-scan';
+import { rxjsGroupBy } from './intermediate-operators/groupBy';
+import { rxjsMerge } from './intermediate-operators/merge';
 
 @Component({
   selector: 'app-root',
@@ -81,7 +83,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     // rxjsConcatMap();
     // rxjsConcatMapTo();
     // rxjsSingle();
-    rxjsScan();
+    //  rxjsScan();
+    //rxjsGroupBy();
+
+    rxjsMerge();
   }
 
   ngAfterViewInit(): void {
